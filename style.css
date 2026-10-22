@@ -1,0 +1,98 @@
+body {
+    background-color: #f7f1e3;
+    font-family: 'Pyidaungsu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* ဖုန်း Landscape နှင့် လက်ပ်တော့များတွင် အပြင်ဘက်သို့ ကျော်ထွက်မသွားစေရန် */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.game-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 550px;
+    max-height: 95vh; /* ဖုန်း Landscape အမြင့်နည်းသည့်အခါ အထက်အောက် အလွန်ကြီးမသွားစေရန် */
+    overflow-y: auto; /* အကယ်၍ အမြင့်ကျော်သွားပါက အတွင်းဘက်မှ Scroll ဆွဲ၍ရရန် */
+    text-align: center;
+    border: 2px solid #dcdde1;
+    box-sizing: border-box;
+}
+
+.game-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e84118;
+    margin-bottom: 10px;
+}
+
+.question-box {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #2f3640;
+    line-height: 1.4;
+}
+
+.interaction-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.answer-btn {
+    background-color: #f5f6fa;
+    color: #2f3640;
+    border: 2px solid #dcdde1;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+button.answer-btn:hover {
+    background-color: #dcdde1;
+}
+
+/* နောက်တစ်ဆင့်သို့ ခလုတ် ဒီဇိုင်း */
+button.next-btn {
+    margin-top: 10px;
+    background-color: #0097e6;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: bounce 0.5s infinite alternate;
+}
+
+button.next-btn:hover {
+    background-color: #00a8ff;
+}
+
+/* ပြန်လည်ကြိုးစားရန် ခလုတ် ဒီဇိုင်း */
+button.retry-btn {
+    margin-top: 10px;
+    background-color: #e1b12c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+}
